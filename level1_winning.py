@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from enum import Enum
 from typing import Dict, Optional, Tuple
-import random
 
 import tcod
 import tcod.event

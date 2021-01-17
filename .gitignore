@@ -2,3 +2,5 @@ __pycache__/
 build/
 env/
 dist/
+.idea/
+.python-version

@@ -1,9 +1,7 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
-from typing import Callable, Dict, List, Optional, Set, Tuple
-import random
+from typing import Dict, Optional, Tuple
 
-import numpy as np
 import tcod
 import tcod.event
 
@@ -71,16 +69,16 @@ def blit_and_flush(
 
 
 def draw_endgame(game: Game):
-        game.draw_console.clear()
-        game.draw_console.print(1, 1, 'You win!')
-        game.draw_console.print(1, 3, 'Press R to play again')
-        game.draw_console.print(1, 5, 'Press Q to quit')
-        game.draw_console.blit(
-            game.root_console,
-            width=game.draw_console.width,
-            height=game.draw_console.height
-        )
-        tcod.console_flush()
+    game.draw_console.clear()
+    game.draw_console.print(1, 1, 'You win!')
+    game.draw_console.print(1, 3, 'Press R to play again')
+    game.draw_console.print(1, 5, 'Press Q to quit')
+    game.draw_console.blit(
+        game.root_console,
+        width=game.draw_console.width,
+        height=game.draw_console.height
+    )
+    tcod.console_flush()
 
 
 def draw_map(game: Game) -> None:
@@ -95,6 +93,7 @@ def draw_map(game: Game) -> None:
         ord('@'),
         fg=tcod.yellow
     )
+
 
 class MapStateHandler(StateHandler):
 
